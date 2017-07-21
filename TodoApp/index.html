@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My TodoList App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" type="" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="images/icon.jpg">
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar" id="navi">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <a style="font-size:25px;" class="navbar-brand" href="http://localhost/CCHUB/TodoApp/index.html"><span></span>CC-HUB Graduate Program</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="http://localhost/CCHUB/TodoApp/index.html">Home</a></li>
+                        <li><a href="http://localhost/CCHUB/TodoApp/About App/about-app.html">About App</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="wrapper">
+            <div class="row">
+                <div id="wrapperInner" class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
+                    <h1>My TodoList Application</h1>
+                    <div id="inputArea">
+                        <div id="inputMsg">
+                            <h3>Register Activity Here</h3>
+                        </div>
+                        <div id="inputText">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                                <input type="text" id="todo" name="todo" class="form-control" placeholder="enter what to do">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                    <button id="clear" type="button" class="btn btn-lg btn-warning"><i class="fa fa-undo" ></i>CLEAR</button>
+                                    <button id="add" type="button" class="btn btn-lg btn-primary"><i class="fa fa-plus"></i>ADD</button>
+                                </div>
+                            </div>
+                            <div id="error" style="color:brown;"></div>
+                        </div>
+                    </div>
+                    <div id="wrapperBoard">
+                        <div style="width:100%; border-bottom:1px solid lightseagreen;">
+                            <h3>My Todo Activities Board</h3>
+                            <div class="row">
+                                <div class="col-md-5 col-xs-12">Total Activity <span id='total' class="badge">0</div>
+                                <div class="col-md-7 col-xs-12"><span id="completed" class="badge">0</span> Completed Activity</div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="table" class="table table-bordered">
+                                <thead>
+                                    <tr id="success">
+                                        <div class="row" style="min-width:60%; max-width:60%;">
+                                            <div class="col-md-6 col-xs-6">
+                                                <th style="text-align:center;">Todo Activity</th>
+                                            </div>
+                                            <div class="col-md-6 col-xs-6">
+                                                <th style="text-align:center;">Actions</th>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody"></tbody>
+                            </table>
+                        </div>
+                        <div id="noActivityMsg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/main.js"></script>
+</body>
+
+</html>
